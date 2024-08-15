@@ -1,9 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function ClientComponent() {
   let [count, setCount] = useState(0);
+  let router=useRouter()
+  let userProfileInfo=null
+  if(userProfileInfo===null) router.push('clientComponent/product/1?search=10')
   return (
     <>
       <h1 className="mt-10 text-center font-bold">Client Component</h1>
